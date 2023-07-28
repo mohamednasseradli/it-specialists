@@ -1,0 +1,103 @@
+/* cairo font from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Marhey:wght@600&display=swap");
+/* global rules */
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --main-transition: 0.3s;
+  --main-color: rgba(194, 181, 63, 0.85); /*used in hover and buttons*/
+  --main-padding: 80px;
+}
+body {
+  font-family: "Cairo", sans-serif !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cairo", sans-serif !important;
+}
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+a,
+span {
+  display: inline-block !important;
+}
+a:hover {
+  color: black;
+}
+/* global rules */
+/* --------------------------------------------- */
+/* sidebar */
+.logo {
+  color: var(--main-color);
+}
+.sidebar-btn {
+  background-color: var(--main-color) !important;
+  transition: var(--main-transition) !important;
+}
+.sidebar-btn:hover {
+  color: white !important;
+  background-color: var(--main-color) !important;
+  transition: var(--main-transition) !important;
+}
+.sidebar-close {
+  background-color: var(--main-color);
+}
+.close-btn:hover {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.links {
+  margin-top: 80px;
+}
+.links .active {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+.links .active i {
+  color: white !important;
+}
+.links a,
+.requests-btn {
+  transition: var(--main-transition) !important;
+  border-bottom: 1px solid #e7e7e7 !important;
+}
+.links a:hover {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+.links .requests-btn:hover {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+.links a:hover i,
+.links .requests-btn:hover i {
+  color: white !important;
+}
+.links a i,
+.links button i {
+  padding-left: 5px;
+  color: var(--main-color);
+}
+/* sidebar */
+.w3-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* ------ */
+form {
+  background-color: white !important;
+}
+input[type="submit"] {
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+  border: none;
+  color: white;
+}
