@@ -1,0 +1,268 @@
+/* cairo font from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Marhey:wght@600&display=swap");
+/* global rules */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+main {
+  flex: 1;
+}
+footer {
+  margin-top: auto;
+}
+:root {
+  --main-transition: 0.3s;
+  --main-color: rgba(194, 181, 63, 0.85); /*used in hover and buttons*/
+  --main-padding: 80px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a,
+span {
+  display: inline-block;
+}
+a:hover {
+  color: black;
+}
+/* global rules */
+/* --------------------------------------------- */
+/* header */
+header {
+  z-index: 99999999;
+  transition: var(--main-transition);
+  background-color: rgb(73, 73, 73) !important;
+}
+header .logo {
+  font-size: 20px;
+}
+header .logo a {
+  color: white;
+}
+.nav-img img {
+  width: 40px !important;
+  height: 35px !important;
+}
+.nav-links .basket {
+  transition: var(--main-transition);
+}
+.nav-links .basket:hover {
+  background-color: var(--main-color);
+}
+.nav-links .nav-img,
+.nav-links .msg-parent,
+.nav-links .basket {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.nav-links .nav-img,
+.nav-links .msg-parent {
+  cursor: pointer;
+}
+.nav-links a,
+.nav-links div {
+  transition: var(--main-transition);
+}
+.nav-links .nav-img:hover {
+  background-color: var(--main-color);
+}
+.nav-links div.msg {
+  color: black;
+  width: 400px;
+  left: 0;
+  top: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .nav-links div.msg {
+    width: 300px;
+    left: -20px;
+  }
+  .nav-img img {
+    width: 50px !important;
+    height: 45px !important;
+  }
+}
+.nav-links a div.msg p {
+  font-size: 14px;
+}
+.nav-img .log-out {
+  width: 150px;
+  left: 0;
+  top: 100%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.msg-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+@media (max-width: 767px) {
+  .nav-links a {
+    width: 60px;
+    height: 60px;
+  }
+  .nav-links a div.msg {
+    width: 300px;
+    left: -50px;
+    top: 100%;
+  }
+  .nav-links a div.msg p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 991px) {
+  header .logo {
+    font-size: 16px;
+  }
+  header .login a {
+    font-size: 14px;
+  }
+}
+/* header */
+.profile {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+}
+.contact-me {
+  transition: var(--main-transition);
+  border: 1px solid var(--main-color);
+  color: var(--main-color) !important;
+}
+.contact-me:hover {
+  color: white !important;
+  border-color: var(--main-color) !important;
+  background-color: var(--main-color);
+}
+.about-me i {
+  margin-right: 2px;
+  margin-left: 2px;
+}
+/* rating */
+.rate-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.rate-photo img {
+  width: 100%;
+  height: 100%;
+}
+.date {
+  font-size: 14px;
+}
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+/** Remove radio buttons **/
+.rating {
+  border: none;
+  float: left;
+}
+
+/** Star is grey when not clicked/hovered over **/
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  margin: 5px;
+  font-size: 2.5em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+/** Star is yellow when clicked/hovered over **/
+.rating > input:checked + label:before {
+  content: "\f005";
+  color: #ffd700;
+}
+
+/** Half star rating **/
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.5em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f006";
+}
+
+.rating > input:checked + label:hover:before {
+  content: "\f006";
+  color: #ffd700;
+}
+
+/** Hover effect **/
+.rating > label:hover:before {
+  color: #ffed85;
+}
+
+/** Selected stars color **/
+.rating > input:checked ~ label:before {
+  content: "\f005";
+  color: #ffd700;
+}
+input[type="submit"] {
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+}
+/* rating */
+/* start footer */
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+}
+.centered {
+  font-size: 50px;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .centered {
+    font-size: 30px;
+  }
+}
+.copy-rights {
+  font-size: 14px;
+  margin-top: 10px;
+}
+footer span {
+  color: var(--main-color);
+}
+/* end footer */

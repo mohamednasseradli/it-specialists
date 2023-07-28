@@ -1,0 +1,52 @@
+/* cairo font from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Marhey:wght@600&display=swap");
+/* global rules */
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --main-transition: 0.3s;
+  --main-color: rgba(194, 181, 63, 0.85); /*used in hover and buttons*/
+  --main-padding: 80px;
+}
+body {
+  height: 100vh;
+  font-family: "Cairo", sans-serif;
+  background-color: rgb(236 239 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a,
+span {
+  display: inline-block;
+}
+a:hover {
+  color: black;
+}
+/* global rules */
+/* --------------------------------------------- */
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+input[type="submit"] {
+  border: 1px solid var(--main-color);
+  transition: var(--main-transition);
+}
+input[type="submit"]:hover {
+  border: 1px solid transparent;
+  background-color: var(--main-color);
+  color: white;
+}

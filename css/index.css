@@ -1,0 +1,223 @@
+/* cairo font from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Marhey:wght@600&display=swap");
+/* global rules */
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --main-transition: 0.3s;
+  --main-color: rgba(194, 181, 63, 0.85); /*used in hover and buttons*/
+  --main-padding: 80px;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a,
+span {
+  display: inline-block;
+}
+a:hover {
+  color: black;
+}
+/* global rules */
+/* --------------------------------------------- */
+/* header */
+header {
+  z-index: 99999999;
+  transition: var(--main-transition);
+}
+header .logo {
+  font-size: 20px;
+}
+header .logo a {
+  color: white;
+}
+header .login a {
+  color: white;
+  border: 1px solid white;
+  transition: var(--main-transition);
+}
+header .login a:hover {
+  background-color: var(--main-color);
+}
+@media (max-width: 991px) {
+  header .logo {
+    font-size: 16px;
+  }
+  header .login a {
+    font-size: 14px;
+  }
+}
+/* header */
+/* hero */
+.hero {
+  background-image: url(../imgs/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  z-index: -1;
+}
+.hero .overlay {
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.hero .overlay p {
+  max-width: 60%;
+  margin: auto;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .hero .overlay h1 {
+    font-size: 26px;
+  }
+  .hero .overlay p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+/* hero */
+/* start how the website works section */
+section.how-it-works {
+  background-color: white;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+section.how-it-works .item {
+  background-color: #f1f1f1f1;
+}
+section.how-it-works .item .item-num {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translate(10px, 17.5px);
+  background-color: var(--main-color);
+}
+section.how-it-works .item p {
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  section.how-it-works .item p {
+    font-size: 14px;
+  }
+}
+/* end how the website works section */
+/* start services section */
+.services {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: #f1f1f1f1;
+}
+/* end services section */
+/* start home login section */
+.home-login-section {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.home-login-section a {
+  background-color: var(--main-color);
+  color: white;
+}
+/* end home login section */
+/* start services section */
+.services button {
+  border: 0;
+  background-color: var(--main-color);
+  color: white;
+}
+.card-btn {
+  border: 1px solid var(--main-color);
+  transition: var(--main-transition);
+  width: 100%;
+}
+.card-btn:hover {
+  border: 1px solid transparent;
+  background-color: var(--main-color);
+  color: white;
+}
+/* end services section */
+/* start popular-questions section */
+.popular-questions {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.accordion-button {
+  position: relative;
+  padding: 16px 20px;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .accordion-button {
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .accordion-body {
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: transparent;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
+.accordion-arrow {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+}
+.accordion-button[aria-expanded="true"] .accordion-arrow {
+  transform: translateY(-50%) rotate(45deg);
+}
+/* end popular-questions section */
+/* start footer */
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+}
+.centered {
+  font-size: 50px;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .centered {
+    font-size: 30px;
+  }
+}
+.copy-rights {
+  font-size: 14px;
+  margin-top: 10px;
+}
+footer span {
+  color: var(--main-color);
+}
+/* end footer */
